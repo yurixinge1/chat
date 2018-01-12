@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">chat</string>
+    <string name="title_activity_chat">ChatActivity</string>
+    <string name="title_activity_register">注册用户</string>
+    <string name="title_activity_contracts">联系人</string>
+    <string name="title_activity_photo_picker">图片选择</string>
+    <string name="title_activity_my_login">登 录</string>
+
+    <!-- Strings related to login -->
+    <string name="login_logo">登录界面图标</string>
+    <string name="input_name">请输入用户名</string>
+    <string name="input_password">请输入密码</string>
+    <string name="auto_login">自动登录</string>
+    <string name="login">登    录</string>
+    <string name="retrieve_password">找回密码</string>
+    <string name="separator">&#160;&#160;&#160;&#160;&#160;&#160;|&#160;&#160;&#160;&#160;&#160;&#160;</string>
+    <string name="register_now">创建用户</string>
+    <string name="title_activity_login22">Sign in</string>
+
+    <!-- Strings related to register -->
+    <string name="register_logo">点击选择个人头像</string>
+    <string name="register_submit">注   册</string>
+    <string name="accept_protocol">已阅读并接收协议</string>
+
+    <!-- Strings related to contracts -->
+    <string name="contracts_picture">点击选择个人头像</string>
+
+</resources>

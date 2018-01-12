@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.xinge.chat">
+
+    <!-- 新版安卓还要在手机app设置里设置权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- ChatActivity图片选择用到 内置SD卡 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE" /> <!-- BitmapCache图片缓存到本地用到 外置SD卡 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:name=".application.ChatApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".module.base.BaseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module.login.LoginActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".module.chat.ChatActivity"
+            android:label="@string/title_activity_chat"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".module.register.RegisterActivity"
+            android:label="@string/title_activity_register" />
+        <activity
+            android:name=".module.contracts.ContractsActivity"
+            android:label="@string/title_activity_contracts" />
+        <activity
+            android:name="com.foamtrace.photopicker.PhotoPickerActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".temp.TempActivity" />
+        <activity android:name=".util.dynamic.DynamicLoadActivity" />
+        <activity
+            android:name="com.temp.rlapk1.MainActivity">
+        </activity>
+    </application>
+
+</manifest>

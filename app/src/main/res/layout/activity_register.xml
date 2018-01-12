@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/login_background_color">
+
+    <!-- 选择头像 -->
+    <ImageView
+        android:id="@+id/iv_reg_logo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent="20%"
+        app:layout_widthPercent="30%"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/register_logo"
+        android:background="@drawable/choose_logo"/>
+    <TextView
+        android:id="@+id/tv_reg_logo"
+        android:layout_below="@+id/iv_reg_logo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent="3%"
+        app:layout_widthPercent="30%"
+        android:layout_marginTop="3dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/register_logo"/>
+
+    <!-- 用户名-->
+    <EditText
+        android:id="@+id/et_reg_name"
+        android:layout_below="@+id/tv_reg_logo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="10%"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:textColor="#ff3b3b3b"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:gravity="bottom"
+        android:textCursorDrawable="@drawable/login_cursor"
+        android:hint="@string/input_name"
+        android:text="user11">
+    </EditText>
+
+    <!-- 密码 -->
+    <EditText
+        android:id="@+id/et_reg_password"
+        android:inputType="textPassword"
+        android:layout_below="@+id/et_reg_name"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="10%"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:textColor="#ff3b3b3b"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:gravity="bottom"
+        android:textCursorDrawable="@drawable/login_cursor"
+        android:hint="@string/input_password"
+        android:text="pwd11">
+    </EditText>
+
+    <!-- 接收协议 -->
+    <CheckBox
+        android:id="@+id/cb_reg_accept_protocol"
+        android:layout_below="@+id/et_reg_password"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_heightPercent="8%"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:text="@string/accept_protocol"
+        android:textStyle="bold"
+        android:checked="true">
+    </CheckBox>
+
+    <!-- 登录按钮 -->
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_below="@+id/cb_reg_accept_protocol"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="11%"
+        android:text="@string/register_submit"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:background="@drawable/login_button"
+        android:radius="10dp"
+        android:textColor="#FFFFFF"
+        android:layout_margin="@dimen/fab_margin" />
+
+</android.support.percent.PercentRelativeLayout>
