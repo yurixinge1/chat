@@ -1,4 +1,4 @@
-package com.xinge.chat.application;
+﻿package com.xinge.chat.application;
 
 import android.support.multidex.MultiDexApplication;
 import com.orhanobut.logger.AndroidLogAdapter;
@@ -19,6 +19,7 @@ public class ChatApplication extends MultiDexApplication {
         super.onCreate();
         app = this;   // 应有启动时已自动创建了一个ChatApplication
 
+	// 内存泄露检测
         if (!LeakCanary.isInAnalyzerProcess(this))    LeakCanary.install(this);
         initLogger();
         initFiles();
